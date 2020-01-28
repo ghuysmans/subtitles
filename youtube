@@ -1,0 +1,3 @@
+#!/bin/sh
+#taken from https://superuser.com/a/1359132
+youtube-dl -j --flat-playlist "$1" | jq -r '.id' | sed 's_^_https://youtu.be/_'
